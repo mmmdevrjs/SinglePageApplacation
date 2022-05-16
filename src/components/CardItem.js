@@ -4,16 +4,16 @@ function CardItem(props) {
   const { idCategory, strCategory, strCategoryThumb, strCategoryDescription } =
     props;
   return (
-    <div class="card">
-      <div class="card-image">
+    <div className="card">
+      <div className="card-image">
         <img src={strCategoryThumb} alt={strCategory} />
       </div>
-      <div class="card-content">
-        <h3 class="card-title">{strCategory}</h3>
+      <div className="card-content">
+        <h3 className="card-title">{strCategory}</h3>
         <p>{strCategoryDescription.slice(0, 60)} ...</p>
       </div>
       <div className="card-action">
-        <Link to={`/category/${idCategory}`} className="btn">
+        <Link to={`/category/${strCategory}`} className="btn">
           watch category
         </Link>
       </div>

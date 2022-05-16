@@ -3,8 +3,9 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Movies from "./components/Movies";
+import Category from "./components/Category";
 import Error from "./pages/Error";
+import Recipe from "./components/Recipe";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/movies/:id" element={<Movies />} />
+          <Route path="/category/:name" element={<Category />} />
+          <Route path="/meal/:id" element={<Recipe />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </main>

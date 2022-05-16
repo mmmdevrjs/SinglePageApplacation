@@ -6,13 +6,14 @@ function CardList({ catalog = [] }) {
     <div className="list">
       {catalog.map((element) => (
         <CardItem
+          key={element.idCategory}
           idCategory={element.idCategory}
           strCategory={element.strCategory}
           strCategoryThumb={element.strCategoryThumb}
           strCategoryDescription={element.strCategoryDescription}
           {...element}
         />
-      ))}
+      ))} 
     </div>
   );
 }
